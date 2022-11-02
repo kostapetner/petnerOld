@@ -20,8 +20,7 @@
 		<div class="login_form w50">
 			<h3 class="form_title fs24">펫시터 정보 등록</h3>
 
-			<form action="/sitterForm/register" method="POST" id="sitterForm"
-				class="mypage_form" enctype="multipart/form-data">
+			<form action="/sitterForm/register" method="POST" id="sitterForm" class="mypage_form" enctype="multipart/form-data">
 				<div class="tip tip1 mb25">펫시터 활동을 위한 추가 정보 등록이 필요해요</div>
 				<!-- 사진등록 -->
 				<div class="f_row profile_upload">
@@ -38,7 +37,7 @@
 							<label for="file" class="pet_btn edit_btn">
 								<i class="fa-solid fa-pen" id="pen"></i>
 							</label>
-							<input type="file" name="profile" id="file" hidden="hidden"></input>
+							<input type="file" name="imageFile" id="file" hidden="hidden"></input>
 						</div>
 					</div>
 				</div>
