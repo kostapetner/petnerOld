@@ -30,14 +30,13 @@
 					<div class="profile_upload">
 						<div class="prof_img">
 							<!-- <p class="img">
-								<img src="#" alt="사진이없을경우 이미지">
+								<img src="#" alt="사진이없을경우 이미지" name="imageFile">
 							</p> -->
-							<!-- 프로필 등록 후 -->
-							<div class="img_wrap img" alt="사진이없을경우 이미지"></div>
+							<div class="img_wrap img"></div>
 							<label for="file" class="pet_btn edit_btn">
 								<i class="fa-solid fa-pen" id="pen"></i>
 							</label>
-							<input type="file" name="imageFile" id="file" hidden="hidden"></input>
+							<input type="file" id="file" name="imageFile" hidden="hidden"></input>
 						</div>
 					</div>
 				</div>
@@ -162,16 +161,15 @@ $(document).ready(function() {
 			//파일을 읽어주는 객체 생성
 			var reader = new FileReader();
 			reader.onload = function(e) {
-				//forEach 반복 하면서 img 객체 생성
 				var img_html = "<img src=\"" + e.target.result + "\" />";
 				$(".img_wrap").append(img_html);
 			}
 			reader.readAsDataURL(f);
 		});
 	}
-
 	//------------- 이미지 미리보기 끝 ------------------
 
+	
 	$(".submit_btn").click(function() {
 		$("#sitterForm").submit();
 	})

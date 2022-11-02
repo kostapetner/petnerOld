@@ -104,6 +104,13 @@ public class SitterInfo {
 	public void setImageFile(MultipartFile imageFile) {
 		this.imageFile = imageFile;
 	}
+
+	@Override
+	public String toString() {
+		return "SitterInfo [id=" + id + ", profile=" + profile + ", pet_kind=" + pet_kind + ", pet_specie=" + pet_specie
+				+ ", work_day=" + work_day + ", service=" + service + ", region=" + region + ", info=" + info
+				+ ", imageFile=" + imageFile + "]";
+	}
 	
 	
 	
