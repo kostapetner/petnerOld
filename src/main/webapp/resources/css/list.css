@@ -1,0 +1,41 @@
+h3{margin-top:40px}
+/* 테이블 리스트 타입 */
+
+.tbl_list_type{width:100%; margin:20px 0; color:var(--navy)}
+.tbl_list_type th{text-align: left; border-bottom:2px solid #ddd; padding:8px 0; font-size:1.4rem; font-weight: 500;}
+.tbl_list_type td{
+  border-bottom: 1px solid #F0F1F2; 
+  padding: 12px 0; 
+  background-color: #fff; 
+  color:#777;
+  font-size:1.4rem;
+  font-weight:300;
+  font-size: 1.4rem;
+}
+.tbl_list_type tr:last-child{border-bottom:2px solid #ddd;}
+
+/* 헤드리스 리스트타입 */
+.default_list_type{}
+.default_list_type .list_title{
+  color:var(--navy); 
+  text-align: center; 
+  font-size:2.2rem;
+  font-weight: 900;
+  border-bottom:2px solid #000;
+  padding:10px 0 20px;
+}
+.default_list_type  li{padding:15px 0; border-bottom:1px solid #ddd}
+.default_list_type  li .cont_title{padding-bottom:10px}
+.default_list_type  li .cont_text{font-size:1.5rem; color:#777; font-weight: 300; line-height: 22px;}
+.default_list_type li .cont_sub_info{
+  display:flex; 
+  justify-content: space-between; 
+  color:#777; 
+  font-weight: 100; 
+  font-size: 1.4rem;
+  padding-top:15px
+}
+.default_list_type li .cont_sub_info .like_view p{display: inline-block; padding-right:6px;}
+.default_list_type li .cont_sub_info .like_view i{color:#757D8A; padding-right:3px;}
+
+

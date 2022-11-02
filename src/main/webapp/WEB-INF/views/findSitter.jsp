@@ -7,9 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../resources/css/common.css">
+   <link rel="stylesheet" href="../resources/css/form-brown.css">
   <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
   <title>Petner</title>
+  <style type="text/css">
+  #ptitle{
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: 26px;
+    width: 800px;
+    margin: 0 auto;
+  }
+   /* padding, margin -> common*/
+  .pb15{padding-bottom:15px;}
+  </style>
 </head>
 
 <body>
@@ -20,7 +32,7 @@
         <h1><img src="../resources/images/header_logo.png" alt="logo"></h1>
         <nav id="gnb">
           <ul>
-            <li><a href="/findSitter">펫시터 찾기</a></li>
+            <li><a href="findsitter">펫시터 찾기</a></li>
             <li><a href="#">돌봐줄 동물 찾기</a></li>
             <li><a href="#">공지사항</a></li>
           </ul>
@@ -67,13 +79,37 @@
         </div>
       </div>
     </header>
+    
     <!-- CONTAINER -->
-    <div class="container">
-      <p style="text-align: center;">기본구조 wrapper > header/ container / footer
-        작업하실 거 container 안에 작성하시면 됩니다. </p>
-    </div>
+	<div class="container">
+		<p id="ptitle">펫시터 찾기</p>
+		<!-- 셀렉트 -->
+		<div class="pb15">
+			<select class="fcc_select" name="" id="">
+				<option value="">셀렉트옵션</option>
+				<option value="">셀렉트옵션</option>
+				<option value="">셀렉트옵션</option>
+			</select>
+		</div>
+		<div class="pb15">
+			<p class="fc_title">통합검색</p>
+			<input type="text" placeholder="통합검색" />
+		</div>
+		<div class="pb15">
+			<label class="fcRadio1">
+				<input type="radio" name="coconut"><span>라디오버튼내용1</span>
+			</label> <label class="fcRadio1"> <input type="radio" name="coconut"><span>라디오버튼내용2</span>
+			</label>
+		</div>
 
-    <!-- FOOTER BASIC -->
+
+
+
+
+
+		</div>
+
+		<!-- FOOTER BASIC -->
     <footer id="footer">
       <div class="footer_inner">
         <div class="footer_logo"><img src="../resources/images/footer_logo.png" alt=""></div>

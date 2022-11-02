@@ -1,0 +1,79 @@
+package com.kosta.petner.bean;
+
+public class SitterInfo {
+
+	private String id;
+	private String profile;
+	private String pet_kind;
+	private String pet_specie;
+	private String work_day;
+	private String service;
+	private String region;
+	private String info;
+	
+	public SitterInfo() {
+		super();
+	}
+	public SitterInfo(String id, String profile, String pet_kind, String pet_specie, String work_day, String service,
+			String region, String info) {
+		super();
+		this.id = id;
+		this.profile = profile;
+		this.pet_kind = pet_kind;
+		this.pet_specie = pet_specie;
+		this.work_day = work_day;
+		this.service = service;
+		this.region = region;
+		this.info = info;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getProfile() {
+		return profile;
+	}
+	public void setProfile(String profile) {
+		this.profile = profile;
+	}
+	public String getPet_kind() {
+		return pet_kind;
+	}
+	public void setPet_kind(String pet_kind) {
+		this.pet_kind = pet_kind;
+	}
+	public String getPet_specie() {
+		return pet_specie;
+	}
+	public void setPet_specie(String pet_specie) {
+		this.pet_specie = pet_specie;
+	}
+	public String getWork_day() {
+		return work_day;
+	}
+	public void setWork_day(String work_day) {
+		this.work_day = work_day;
+	}
+	public String getService() {
+		return service;
+	}
+	public void setService(String service) {
+		this.service = service;
+	}
+	public String getRegion() {
+		return region;
+	}
+	public void setRegion(String region) {
+		this.region = region;
+	}
+	public String getInfo() {
+		return info;
+	}
+	public void setInfo(String info) {
+		this.info = info;
+	}
+	
+	
+}
