@@ -8,9 +8,9 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2d6fc6008c147d8c5d81603f2166c5d&libraries=services"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../resources/css/common.css">
-<link rel="stylesheet" href="../resources/css/form_component.css">
-<link rel="stylesheet" href="../resources/css/mypage_form.css">
+<link rel="stylesheet" href="/resources/css/common.css">
+<link rel="stylesheet" href="/resources/css/form_component.css">
+<link rel="stylesheet" href="/resources/css/mypage_form.css">
 <title>시터정보입력</title>
  <style>
     .map_wrap {position:relative;width:100%;height:350px;}
@@ -174,11 +174,13 @@ function curLocation(){
 	            let callback = function(result, status) {
 	                if (status === kakao.maps.services.Status.OK) {
 	                    console.log(result[0].address.address_name);
+	                    console.log(result[0].address.region_1depth_name);
+	                    console.log(result[0].address.region_2depth_name);
+	                    console.log(result[0].address.region_3depth_name);
 	                }
 	            }
 	            geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
 	        }
-	        
 	      });
 	    
 	} else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
