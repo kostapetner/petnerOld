@@ -4,7 +4,6 @@
     - header, footer css
     - header, footer media query css
     - prefix css
-    - test
   */
   /* @font-face {font-family: 'Noto Sans KR';
   font-style: normal;font-weight: 100;
@@ -41,7 +40,7 @@
   h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd{margin: 0; padding: 0;}
   body {line-height: 1; margin: 0;}
   ol, ul {list-style: none;}
-  table {border-collapse: collapse;	border-spacing: 0; cellpadding}
+  table {border-collapse: collapse;	border-spacing: 0;}
   a{color:inherit; text-decoration: none;}
   address, em, i{font-style: normal; }
   img{border: none; }
