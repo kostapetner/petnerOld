@@ -22,8 +22,10 @@ public class SitterFormController {
 
 	//펫시터 정보등록 페이지
 	@RequestMapping(value = "/sitterForm", method = RequestMethod.GET)
-	String sitterForm() {
-		return "sitterForm";
+	String sitterForm(Model model) {
+		model.addAttribute("title", "시터정보등록");
+		model.addAttribute("page", "mypage/sitterForm");
+		return "/layout/mypage_default";
 	}
 	
 	//DB insert

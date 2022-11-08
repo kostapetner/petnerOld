@@ -2,6 +2,7 @@ package com.kosta.petner.contorller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -13,14 +14,11 @@ public class FindSitterController {
 	@Autowired
 	FindSitterService findSitterService;
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	String main() {
-		return "main";
-	}
-	
 	@RequestMapping(value = "/findSitter", method = RequestMethod.GET)
-	String findSitter() {
-		return "findSitter";
+	String findSitter(Model model) {
+		model.addAttribute("title", "펫시터찾기");
+		model.addAttribute("page", "find/findSitter");
+		return "/layout/main";
 	}
 	
 	

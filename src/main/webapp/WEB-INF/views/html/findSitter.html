@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/form_component.css">
+  <link rel="stylesheet" href="./css/list.css">
+  <link rel="stylesheet" href="./plugins/air/css/datepicker.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
+  <script src="./plugins/air/js/datepicker.min.js"></script>
+  <script src="./plugins/air/js/datepicker-ko.js"></script>
+  <title>펫시터찾기</title>
+</head>
+<style>
+  .filter_feed{display:none}
+  .filter_feed .f_row{padding-bottom:5px;}
+</style>
+<body>
+  <div id="wrapper">
+     <!-- HEADER BASIC -->
+     <header id="header">
+      <div class="header_inner">
+        <h1><img src="./images/header_logo.png" alt="logo"></h1>
+        <nav id="gnb">
+          <ul>
+            <li><a href="#">펫시터 찾기</a></li>
+            <li><a href="#">보호자 찾기</a></li>
+            <li><a href="#">공지사항</a></li>
+          </ul>
+        </nav>
+        <div class="login_menu">
+          <ul>
+            <!-- 세션있을때  -->
+            <li class="in_session"><a class="heart transition02" href="#"><i class="fa-solid fa-heart"></i></a></li>
+            <li class="in_session"><a class="alert transition02" href="#"><i class="fa-solid fa-bell"></i></a></li>
+            <li class="in_session mypage"><a a class="my transition02" href="#"><i class="fa-solid fa-user"></i> </a></li>
+
+            <!-- 세션없을때 로그인 -->
+            <li><a class="login" href="#">로그인</a></li>
+          </ul>
+        </div>
+      </div>
+    </header> 
+    <!-- CONTAINER -->
+    <div class="container w90">
+      <div class="">
+        <p class="list_title">펫시터 찾기</p>
+        <!-- 시터성별, 요일, 서비스, 동물종류 필터 피드-->
+        <div class="filter_feed">
+          <div class="f_row">
+            <p class="filter_title">펫시터 성별</p>
+            <label class="fcCbox1"><input type="checkbox" name="sex"><span>여성펫시터</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="sex"><span>남성펫시터</span></label>
+          </div>
+          <div class="f_row">
+            <p class="filter_title">가능한 요일</p>
+            <label class="fcCbox1"><input type="checkbox" name="day" value="mon"><span>월</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="day" value="tue"><span>화</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="day" value="tue"><span>화</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="day" value="tue"><span>화</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="day" value="tue"><span>화</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="day" value="tue"><span>화</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="day" value="tue"><span>화</span></label>
+          </div>
+          <div class="f_row">
+            <p class="filter_title">가능한 요일</p>
+            <label class="fcCbox1"><input type="checkbox" name="service" value="1"><span>방문</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="service" value="2"><span>어쩌고</span></label>           
+          </div>
+          <div class="f_row">
+            <p class="filter_title">동물종류</p>
+            <label class="fcCbox1"><input type="checkbox" name="service" value="1"><span>멍멍</span></label>
+            <label class="fcCbox1"><input type="checkbox" name="service" value="2"><span>야옹</span></label>           
+          </div>
+          <div class="f_row">
+            <input type="text" class="date-picker">
+          </div>
+          
+        </div>
+        <!-- 카드형 리스트 -->
+        <div class="card_list_type">
+          <ul>
+            <li>
+              <div class="data">
+                 <!-- 이미지영역 -->
+                <div class="img_area">
+                  <img src="https://img.wkorea.com/w/2022/10/style_634f9b4c8c907-500x354-1666161931.jpg" alt="이미지">
+                </div>
+                <!-- 텍스트정보 영역 -->
+                <div class="text_area">
+                  <div class="row1">
+                    <p><span class="nick">닉네임</span><span class="type">상태값</span></p>
+                    <p><span class="badge">최강기요미</span></p>
+                  </div> 
+                  <div class="row2">
+                    <p><a href="#">팔로워<span class="f_val">122</span></a></p>
+                    <p><a href="#">팔로잉<span class="f_val">122</span></a></p>                    
+                  </div>
+                  <div class="row3">
+                    2022-05-23~
+                  </div>       
+                  <div class="row4">
+                    자기소개 
+                  </div>     
+                </div>
+              </div>
+              <div class="icons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="#"><i class="fa-solid fa-comment-dots"></i></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="footer_inner">
+        <div class="footer_logo"><img src="./images/footer_logo.png" alt=""></div>
+        <div class="footer_menu">
+          <!-- 마이페이지 -->
+          <div>
+            <p class="fm_title">마이페이지</p>
+            <div class="fms">
+              <a href="#">마이페이지</a>
+              <a href="#">팔로우/팔로워</a>
+              <a href="#">쪽지</a>
+              <a href="#">내가찜한게시글</a>
+              <a href="#">리뷰관리</a>
+              <a href="#">1:1문의</a>
+            </div>
+          </div>
+          <!-- 펫시터찾기 -->
+          <div>
+            <p class="fm_title">펫시터찾기</p>
+            <div class="fms">
+              <a href="#">서비스 신청</a>
+              <a href="#">내 주변 시터</a>
+            </div>
+          </div>
+          <!-- 공지사항 -->
+          <div>
+            <p class="fm_title">공지사항</p>
+            <div class="fms">
+              <a href="#">Q&A</a>
+              <a href="#">이벤트</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
+<style>
+  
+</style>
+
+<script>
+  $(document).ready(function(){
+    $(".date-picker").datepicker({
+    	language: 'ko'
+    }); 
+  })
+</script>
+
