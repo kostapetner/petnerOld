@@ -38,7 +38,7 @@
 							<!-- <p class="img">
 								<img src="#" alt="사진이없을경우 이미지" name="imageFile">
 							</p> -->
-							<div class="img_wrap img"></div>
+							<img id="rep" class="img_wrap img"/> <br>
 							<label for="file" class="pet_btn edit_btn">
 								<i class="fa-solid fa-pen" id="pen"></i>
 							</label>
@@ -50,16 +50,25 @@
 				<!-- 동물체크 -->
 				<div class="f_row">
 					<p class="fc_title">케어가능한 반려동물의 종류를 선택해주세요</p>
-					<label class="fcCbox2 mr12"> <input type="checkbox"
-						name="pet_kind" value="dog"><span>강아지</span>
-					</label> <label class="fcCbox2 mr12"> <input type="checkbox"
-						name="pet_kind" value="cat"><span>고양이</span>
-					</label> <label class="fcCbox2 mr12"> <input type="checkbox"
-						name="pet_kind" value="fish"><span>관상어</span>
-					</label> <label class="fcCbox2 mr12"> <input type="checkbox"
-						name="pet_kind" value="bird"><span>새</span>
-					</label> <label class="fcCbox2"> <input type="checkbox"
-						name="pet_kind" value="reptile"><span>파충류</span>
+					<label class="fcCbox2 mr12"> 
+						<input type="checkbox" name="pet_kind" value="dog">
+						<span>강아지</span>
+					</label> 
+					<label class="fcCbox2 mr12"> 
+						<input type="checkbox" name="pet_kind" value="cat">
+						<span>고양이</span>
+					</label> 
+					<label class="fcCbox2 mr12"> 
+						<input type="checkbox" name="pet_kind" value="fish">
+						<span>관상어</span>
+					</label> 
+					<label class="fcCbox2 mr12"> 
+						<input type="checkbox" name="pet_kind" value="bird">
+						<span>새</span>
+					</label> 
+					<label class="fcCbox2"> 
+						<input type="checkbox" name="pet_kind" value="reptile">
+						<span>파충류</span>
 					</label>
 					<p class="fc_title">종을 입력해주세요</p>
 					<input type="text" name="pet_specie">
@@ -226,42 +235,21 @@ function displayMarker(locPosition, message) {
 	map.setCenter(locPosition);
 }
 //------------- 마커 생성 끝 ------------------
+
 $(document).ready(function() {
+	//지도 불러오기
 	curLocation();
-	//------------- 이미지 미리보기 시작 ------------------
-	$("#file").on("change", handleImgFileSelect);
-
-	//e : change 이벤트 객체
-	//change 이벤트 설정하면  e는 이벤트가 된다. handleImgFileSelect에 파라미터 주면 e가 이벤트가 아니라 그냥 파라미터가 됨.
-	function handleImgFileSelect(e) {
-		$(".img").empty();
-		console.log("여길봐라: " + JSON.stringify(e));
-		//e.target : 파일객체
-		//e.target.files : 파일객체 안의 파일들
-		var files = e.target.files;
-		var filesArr = Array.prototype.slice.call(files);
-
-		//f : 파일 객체
-		filesArr.forEach(function(f) {
-			//미리보기는 이미지만 가능함
-			if (!f.type.match("image.*")) {
-				alert("이미지만 가능합니다");
-				return;
-			}
-
-			// 파일객체 복사
-			sel_file.push(f);
-
-			//파일을 읽어주는 객체 생성
-			var reader = new FileReader();
+	
+	//이미지 미리보기
+	$(function() {
+		$('#file').change(function(event) {
+			let reader = new FileReader();
 			reader.onload = function(e) {
-				var img_html = "<img src=\"" + e.target.result + "\" />";
-				$(".img_wrap").append(img_html);
-			}
-			reader.readAsDataURL(f);
+				$('#rep').attr('src', e.target.result);
+			};
+			reader.readAsDataURL(event.target.files[0]);	
 		});
-	}
-	//------------- 이미지 미리보기 끝 ------------------
+	})
 	
 	//------------- 체크박스 전체선택 시작 ---------------
 	//활동가능 요일

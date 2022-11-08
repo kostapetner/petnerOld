@@ -261,7 +261,56 @@
     font-weight: 500;
     line-height: 20px;
   }
-  
+
+  /* toggle */
+  .toggle{display: flex; justify-content: flex-end; flex-direction: column; align-items: flex-end; padding-bottom: 26px;}   
+  .switch {position: relative;  display: inline-block; width: 120px; height: 30px;  }
+  .switch input {opacity: 0; width: 0;  height: 0;}
+  .texts{
+    cursor: pointer;
+    width: 75%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    color: #6e764f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:1.4rem
+  }
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#dbeb9d;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 50px;
+    left: 9px;
+    bottom: 4px;
+    background-color: #f6f6f6;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(53px);
+    -ms-transform: translateX(53px);
+    transform: translateX(53px);
+  }
+  /* Rounded sliders */
+  .slider.round { border-radius: 12px; }
+  .slider.round:before {border-radius: 21px;}
+  .toggle .active{color:#393939}
+
 
 
 

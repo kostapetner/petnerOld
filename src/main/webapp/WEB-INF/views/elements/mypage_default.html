@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./css/mypage_default.css">
   <link rel="stylesheet" href="./css/list.css">  
   <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
   <title>MYPAGE LAYOUT</title>
 </head>
 <body>
@@ -58,13 +60,26 @@
         <div class="my_view">
           <div class="side_menu">
             <!-- 조건 둘다일경우만 토글 출력 -->
-            
+            <div class="toggle">
+              <label class="switch">
+                <input type="checkbox">        
+                <span class="slider round"></span>
+                <span class="texts">
+                  <span class="text1 active">펫시터</span>
+                  <span class="text2">보호자</span>
+                </span>
+              </label>
+            </div>
+            <!-- 둘다일경우 시터가 default -->
             <ul>
               <li>
                 <p class="first_menu">내정보</p>
                 <div class="second_menu">
                   <a href="#">나의정보보기</a>
-                  <a href="#">나의 시터정보 관리</a>
+                  <a href="#" class="coconut">나의 시터정보 관리</a>
+                  <!-- 보호자일경우
+                    <a href="#">나의펫정보관리</a>
+                  -->
                 </div>
               </li>
 
@@ -73,6 +88,10 @@
                 <div class="second_menu">
                   <a href="#">내가 받은 요청</a>
                   <a href="#">내가 찜한 요청</a>
+                  <!-- 보호자일경우
+                    <a href="#">서비스 요청하기</a>
+                    <a href="#">신청한 서비스 보기</a>
+                  -->
                 </div>
               </li>
               
@@ -95,7 +114,7 @@
             </ul>
           </div>
           <div class="cont_view">
-            마이페이지 컨텐츠뷰
+            
           </div>
         </div>
       </div>
@@ -139,3 +158,19 @@
   </div>
 </body>
 </html>
+
+<script>
+  $(document).ready(function(){
+    $(".toggle input").click(function(){      
+      $(".text1").toggleClass("active");
+      $(".text2").toggleClass("active");
+
+      if( $(this).is(':checked') ){ // check가 보호자임
+        // console.log("켜짐")
+        // $(".coconut").attr("href", "www");
+      }else{
+        console.log("꺼짐")
+      }
+    })
+ })
+</script>
