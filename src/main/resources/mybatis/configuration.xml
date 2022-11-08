@@ -3,10 +3,12 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="member" type="com.kosta.petner.bean.Member" />
+		<typeAlias alias="users" type="com.kosta.petner.bean.UsersVo" />
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="mybatis/mapper/member.xml" />
+		<mapper resource="mybatis/mapper/users.xml" />
 	</mappers>
 
 	
