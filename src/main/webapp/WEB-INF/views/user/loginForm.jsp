@@ -31,13 +31,13 @@
 
 <div class="w45 login_wr">      
   <div class="logo"><img src="./images/logo3.svg" alt=""></div>
-  <form action="#" method="POST" id="" class="login_form">
+  <form action="/login" method="POST" id="" class="login_form">
     
     <div class="f_row">
-      <input type="text" placeholder="ID"/>
-      <input type="password" placeholder="비밀번호"/>
+      <input type="text" placeholder="ID" name="id"/>
+      <input type="password" placeholder="비밀번호"/ name="password">
     </div>
-    <span class="pet_btn login_btn transition02">로그인</span>
+     <input type="submit" class="pet_btn login_btn transition02" value= "로그인"/>
   </form>
   <div class="info_area">
     <p>

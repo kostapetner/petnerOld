@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="cssPath" value="${pageContext.request.contextPath}/resources/css"/>
-<c:set var="imgPath" value="${pageContext.request.contextPath}/resources/images"/>
+
 
 
 <!DOCTYPE html>
@@ -11,6 +10,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="resources/css/common.css">
+  <link rel="stylesheet" href="resources/css/form_component.css">
   <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
   <title>회원가입</title>
   <script src= "https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -151,6 +152,7 @@
                 // 각 주소의 노출 규칙에 따라 주소를 조합한다.
                 // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
                 var addr = ''; // 주소 변수
+                var extraAddr = ''; // 참고항목 변수
                 
                 //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
                 if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
@@ -171,20 +173,29 @@
                         extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
                     
                 	}
+                 // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                    if(extraAddr !== ''){
+                        extraAddr = ' (' + extraAddr + ')';
+                    }
+                    // 조합된 참고항목을 해당 필드에 넣는다.
+                    document.getElementById("add4").value = extraAddr;
+                
+                } else {
+                    document.getElementById("add4").value = '';
+                }
 
               			  // 우편번호와 주소 정보를 해당 필드에 넣는다.
              			  $("#add1").val(data.zonecode);
              			  $("#add2").val(addr);
-                }
-             }
-            
-        }).open();
-    }
+                
+        	}
+  	  }).open();
+	}
 
 
   
   $(function () {
-	   $('#joinform').submit(function() {
+	   $('#joinForm').submit(function() {
 		
 			  }); //유효성체크 끝
 		
@@ -207,7 +218,7 @@
 	   		}
 	   		$.ajax({
 	   			type:"post",
-	   			url:"http://localhost:8088/petner/checkId",
+	   			url:"http://localhost:8088/checkId",
 	   			data:{id:id},   //id(key):id(value)
 	   			success:function(data,textStatus) {
 	   				if(data=="true") {
@@ -215,6 +226,7 @@
 	   				}else{ 
 	   					$('#checkid-msg').text("사용 가능한 아이디입니다").css("color", "green");
 	   				}	
+	   				
 	   			} 
 			}) //ajax 끝
 		}); // 중복체크 끝
@@ -234,7 +246,7 @@
 
     <div class="login_form w50">      
       <h3 class="form_title">회원가입</h3>
-      <form id= "" action="./joinpet" method="POST" class="join_form" onsubmit = "return check()">
+      <form id= "joinForm" action="/joinpet" method="POST" class="join_form" onsubmit = "return check()">
       
         <div class="f_row">
           <p class="fc_title">어쩌고저쩌고</p>
@@ -306,6 +318,7 @@
             </p>            
             <input class="mb10" type="text" id ="add2" name="address" readonly/>
             <input class="mb10" type="text" id ="add3" name="address" placeholder="상세주소입력"/>
+            <input type="hidden" id="add4" name="address" placeholder="참고항목">
              <p><small id="checkaddress-msg" class="form-error"></small></p>
           </div>
            <input type="hidden" name="joindate" id="joindate"/>

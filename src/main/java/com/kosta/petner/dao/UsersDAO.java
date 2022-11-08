@@ -9,5 +9,10 @@ public interface UsersDAO {
 	
 	//아이디 중복체크
 	UsersVo selectId(String id)throws Exception;
+	
+	//로그인
+	UsersVo getUsers(UsersVo usersVo) throws Exception;
 
-	}
+	int doLoginCnt(UsersVo usersVo) throws Exception;
+	
+}

@@ -10,7 +10,6 @@
 		]]>
 	</insert>
 	
-
 	
 	<select id= "selectId" parameterType = "String" resultType= "com.kosta.petner.bean.UsersVo" >
 	<![CDATA[
@@ -18,11 +17,21 @@
 	]]>	
 	</select>
 	
-		<select id= "selectEmail" parameterType = "String" resultType= "com.kosta.petner.bean.UsersVo" >
+	
+	<select id="doLogin" parameterType="String" resultType="com.kosta.petner.bean.UsersVo">
 	<![CDATA[
-	select * from users where email =#{email}
-	]]>	
+		select userNo, userType, id, password,email,name,nickname,gender,address, joindate
+		from users 
+		where id=#{id} and password=#{password}
+	]]>
 	</select>
 	
+		<select id="doLoginCnt" parameterType="com.kosta.petner.bean.UsersVo" resultType="int"> 
+	<![CDATA[
+		SELECT count(*)
+		FROM USERS 
+		WHERE ID = #{id} and password = #{password}
+	]]>
+	</select>
 	
 </mapper>

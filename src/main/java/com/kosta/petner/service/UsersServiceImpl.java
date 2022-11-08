@@ -26,11 +26,25 @@ public class UsersServiceImpl implements UsersService {
 
 	@Override
 	public boolean isDoubleId(String id) throws Exception {
-		System.out.println("service"+ id);
+		
 		UsersVo users = usersDAO.selectId(id);
 		if(users==null) return false;
 		return true;
 	}
+
+
+	@Override
+	public UsersVo getUsers(UsersVo usersVo) throws Exception {
+		return usersDAO.getUsers(usersVo);
+	}
+
+
+	@Override
+	public int doLoginCnt(UsersVo usersVo) throws Exception {
+		return usersDAO.doLoginCnt(usersVo);
+	}
+	
+	
 
 
 	

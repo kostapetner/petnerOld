@@ -10,5 +10,11 @@ public interface UsersService {
 	//중복체크
 	public boolean isDoubleId(String id) throws Exception;
 	
+	//로그인
+	public UsersVo getUsers(UsersVo usersVo) throws Exception;
+	
+	//로그인 개수
+		public int doLoginCnt(UsersVo usersVo) throws Exception;
+		
 	
 }
