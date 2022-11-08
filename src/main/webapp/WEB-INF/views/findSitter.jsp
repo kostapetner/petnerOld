@@ -119,6 +119,7 @@
         </div>
       </div>
     </div>
+    <!-- 푸터 -->
     <footer id="footer">
       <div class="footer_inner">
         <div class="footer_logo"><img src="/resources/images/footer_logo.png" alt=""></div>
