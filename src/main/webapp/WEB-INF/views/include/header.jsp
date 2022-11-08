@@ -30,7 +30,7 @@
 <!-- HEADER BASIC -->
 <header id="header">
   <div class="header_inner">
-    <h1><img src="${imgPath}/header_logo.png" alt="logo"></h1>
+    <h1><a href="/"><img src="${imgPath}/header_logo.png" alt="logo"></a></h1>
     <nav id="gnb">
       <ul>
         <li><a href="#">펫시터 찾기</a></li>
