@@ -10,7 +10,6 @@ public class MainController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	String main(Model model) {
-		System.out.println("AA");
 		return "index_main";
 	}
 }

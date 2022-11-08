@@ -15,7 +15,7 @@
     <c:import url='/WEB-INF/views/include/header.jsp'/>
     <!-- CONTAINER -->
     <div class="container">
-     	index화면 
+     	index화면 vv
     </div>
 		
 		<!-- FOOTER BASIC -->

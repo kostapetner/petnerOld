@@ -4,7 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class SitterInfo {
 
-	private String id;
+	private Integer userNo;
 	private String profile;
 	private String pet_kind;
 	private String pet_specie;
@@ -19,10 +19,10 @@ public class SitterInfo {
 		super();
 	}
 
-	public SitterInfo(String id, String profile, String pet_kind, String pet_specie, String work_day, String service,
-			String region, String info, MultipartFile imageFile) {
+	public SitterInfo(Integer userNo, String profile, String pet_kind, String pet_specie, String work_day,
+			String service, String region, String info, MultipartFile imageFile) {
 		super();
-		this.id = id;
+		this.userNo = userNo;
 		this.profile = profile;
 		this.pet_kind = pet_kind;
 		this.pet_specie = pet_specie;
@@ -33,12 +33,12 @@ public class SitterInfo {
 		this.imageFile = imageFile;
 	}
 
-	public String getId() {
-		return id;
+	public Integer getUserNo() {
+		return userNo;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setUserNo(Integer userNo) {
+		this.userNo = userNo;
 	}
 
 	public String getProfile() {
@@ -105,13 +105,5 @@ public class SitterInfo {
 		this.imageFile = imageFile;
 	}
 
-	@Override
-	public String toString() {
-		return "SitterInfo [id=" + id + ", profile=" + profile + ", pet_kind=" + pet_kind + ", pet_specie=" + pet_specie
-				+ ", work_day=" + work_day + ", service=" + service + ", region=" + region + ", info=" + info
-				+ ", imageFile=" + imageFile + "]";
-	}
-	
-	
 	
 }
