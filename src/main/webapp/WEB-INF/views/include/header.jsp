@@ -47,7 +47,7 @@
         <li class="in_session mypage"><a a class="my transition02" href="#"><i class="fa-solid fa-user"></i> </a></li>
 
         <!-- 세션없을때 로그인 -->
-        <li><a class="login" href="#">로그인</a></li>
+        <li><a class="login" href="loginForm">로그인</a></li>
       </ul>
     </div>
     <!-- 마이페이지 플로트메뉴 / 로그아웃 -->
