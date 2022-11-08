@@ -29,10 +29,10 @@
   /* 사이드메뉴 / 뷰단 */
   .my_view{display:flex;}
   .my_view .side_menu{
-    width: 200px;
+    width: 250px;
     background-color: #f8f8f8;
     padding: 30px 20px;
-    margin-right: 25px;
+    margin-right: 85px;
     /* border-radius: 0 10px 10px 0; */
   } 
   .my_view .side_menu li{margin-bottom:50px; color:#757D8A;}

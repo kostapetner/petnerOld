@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/form_component.css">
+  <!-- Latest compiled and minified CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- Latest compiled JavaScript -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
+  <title>Forms type</title>
+</head>
+<style>
+  /* Form Component Config :: START */
+  /* fomr component checkbox / radio / text / default */
+  :root{
+    --fcc-font01: #666;
+    --fcc-bg01: #fff;
+    --fcc-focus: #839DFA;
+    --fcc-focus-outline: #d7e0ff;
+    --fcc-checked: #6f71f2;
+    --fcc-border: #E1E3E6;
+  }
+
+  form{max-width:800px;}
+  .fc_title{font-size: 1.6rem; padding-bottom: 8px; color: var(--navy);}
+  
+  /* Form Component Config :: END */
+
+  /* padding, margin -> common*/
+  .pb30{padding-bottom:30px;}
+
+ 
+
+  /* input[type=text], input[type=password] */
+  input[type=text], 
+  input[type=password],
+  input[type=number]{
+    border:1px solid var(--fcc-border);
+    margin: 0;
+    padding: 0 10px;
+    min-width: 200px;
+    height: 38px;
+    color: var(--fcc-font01);
+    font-size: 1.4rem;
+    background-color: var(--fcc-bg01);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-indent: 1rem;
+    box-sizing: border-box;
+  }
+
+  input[type=text]:focus, 
+  input[type=password]:focus{
+    border-color:var(--fcc-focus);
+    outline: 4px solid var(--fcc-focus-outline);
+  }
+
+  input[type=text]::placeholder,
+  input[type=password]::placeholder{color:#ddd;}
+
+
+  /* form component checkbox + radio */
+  label.fcCbox1{margin-right:15px;}
+  label.fcCbox1 span,
+  label.fcRadio1 span{color:var(--navy)}
+
+  /* radio */
+  label.fcRadio1 span{
+    margin: 0;
+    padding: 0 20px 0 20px;
+    height: 38px;
+    color: var(--navy);
+    text-align: center;
+    background-color:#F8F9FA;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label.fcCbox1 > input[type=checkbox],
+  label.fcRadio1 > input[type=radio]{visibility: hidden; position: absolute; left: -10px;} 
+  label.fcRadio1 > span{transition: all 0.2s;}
+
+  label.fcCbox1 > span:before{content: "\f0c8"; margin-right: 6px; font-family: "Font Awesome 5 Free";}
+  label.fcCbox1 > input[type=checkbox]:checked + span:before{content: "\f14a";  color: var(--fcc-checked)}
+  
+  label.fcRadio1 >  input[type=radio]:checked + span{background-color: #a0a0de; color:#fff;}
+  
+  /* form component select*/
+  .fcc_select{
+    border:1px solid var(--fcc-border);
+    margin: 0;
+    padding: 0 10px;
+    min-width: 200px;
+    height: 38px;
+    color: var(--fcc-font01);
+    font-size: 1.4rem;
+    background-color: var(--fcc-bg01);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .fcc_select:focus{
+    border-color:var(--fcc-focus);
+    outline: 4px solid var(--fcc-focus-outline);
+  }
+
+  /* textarea */
+  .fcc_textarea{
+    border:1px solid var(--fcc-border); 
+    resize: none; 
+    min-height: 220px;
+    min-width: 400px;
+    border-radius: 5px;
+    outline:none;
+    padding:20px;
+    color: var(--fcc-font01);
+    font-family: noto-sans;
+    font-size: 1.6rem;
+  }
+  .fcc_textarea:focus{
+    border-color: var(--fcc-focus);
+    outline: 4px solid var(--fcc-focus-outline);
+    color: var(--fcc-font01);
+    font-family: noto-sans;
+    font-size: 1.6rem;
+  }
+
+</style>
+<body>
+  <div id="wrapper">
+    <div class="login_form w60">      
+      <h2 style="text-align: center; margin-top:50px">FORM DEFAULT</h2>
+      <p style="text-align: center; margin-bottom:50px">radio, check, select, text(number), submit, textarea</p>
+      <br>
+      
+      <form action="">
+        <!-- TEXT/PASSWORD -->
+        <div class="pb30">
+          <p class="fc_title">이메일(input제목)</p>
+          <input type="text" placeholder="text input placeholder"/>
+        </div>
+        <div class="pb30">
+          <p class="fc_title">이메일(input제목)</p>
+          <input type="password" placeholder="password input placeholder"/>
+        </div>
+        <!-- 체크박스 -->
+        <div class="pb30">
+          <label class="fcCbox1"><input type="checkbox"><span>체크박스내용1</span></label>
+          <label class="fcCbox1"><input type="checkbox"><span>체크박스내용2</span></label>
+        </div>
+
+        <!-- 라디오 -->
+        <div class="pb30">
+          <label class="fcRadio1">
+            <input type="radio" name="coconut"><span>라디오버튼내용1</span>
+          </label>
+          <label class="fcRadio1">
+            <input type="radio" name="coconut"><span>라디오버튼내용2</span>
+          </label>
+        </div>
+        <!-- 셀렉트 -->
+        <div class="pb30">
+          <select class="fcc_select" name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+          </select>
+        </div>
+
+        <!-- textarea -->
+        <div class="pb30">
+          <textarea name="" id="" class="fcc_textarea">textarea 이다</textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
