@@ -8,9 +8,9 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2d6fc6008c147d8c5d81603f2166c5d&libraries=services"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/resources/css/common.css">
+<!-- <link rel="stylesheet" href="/resources/css/common.css">
 <link rel="stylesheet" href="/resources/css/form_component.css">
-<link rel="stylesheet" href="/resources/css/mypage_form.css">
+<link rel="stylesheet" href="/resources/css/mypage_form.css"> -->
 <title>펫정보입력</title>
 <style>
 	.map_wrap {
