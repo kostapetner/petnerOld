@@ -30,13 +30,18 @@
 <!-- HEADER BASIC -->
 <header id="header">
   <div class="header_inner">
-    <h1><img src="${imgPath}/header_logo.png" alt="logo"></h1>
+    <h1><a href="/"><img src="${imgPath}/header_logo.png" alt="logo"></a></h1>
     <nav id="gnb">
       <c:choose>
       <c:when  test="${empty authUser}">
       <ul>
+<<<<<<< HEAD
       	<li><a href="#">펫시터 찾기</a></li>
         <li><a href="#">돌봐줄 동물 찾기</a></li>
+=======
+        <li><a href="/findSitter">펫시터 찾기</a></li>
+        <li><a href="/findPet">돌봐줄 동물 찾기</a></li>
+>>>>>>> hyekyung
         <li><a href="#">공지사항</a></li>
       </ul>
       </c:when>
@@ -54,7 +59,10 @@
       
       <ul>
         <!-- 세션있을때  -->
+<<<<<<< HEAD
         <c:if test="${not empty authUser}">
+=======
+>>>>>>> hyekyung
         <li class="in_session"><a class="heart transition02" href="#"><i class="fa-solid fa-heart"></i></a></li>
         <li class="in_session"><a class="heart transition02" href="#"><i class="fa-solid fa-comment-dots"></i></a></li>
         <li class="in_session"><a class="alert transition02" href="#"><i class="fa-solid fa-bell"></i></a></li>

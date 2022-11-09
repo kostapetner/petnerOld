@@ -4,7 +4,7 @@
 <mapper namespace="mapper.sitterForm">
 	
 	<insert id="regist" parameterType="com.kosta.petner.bean.SitterInfo">
-		insert into sitter_info( id
+		insert into sitter_info( userNo
 								,profile
 								,pet_kind
 								,pet_specie
@@ -12,7 +12,7 @@
 								,service
 								,region
 								,info
-		) values(#{id, jdbcType=VARCHAR}
+		) values(#{userNo, jdbcType=INTEGER}
 				,#{profile, jdbcType=VARCHAR}
 				,#{pet_kind, jdbcType=VARCHAR}
 				,#{pet_specie, jdbcType=VARCHAR}

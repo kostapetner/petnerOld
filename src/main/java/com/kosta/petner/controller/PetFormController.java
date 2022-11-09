@@ -1,4 +1,4 @@
-package com.kosta.petner.contorller;
+package com.kosta.petner.controller;
 
 import java.io.File;
 

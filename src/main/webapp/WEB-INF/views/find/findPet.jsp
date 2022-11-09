@@ -23,7 +23,7 @@
     <!-- CONTAINER -->
     <div class="container w90">
       <div class="">
-        <p class="list_title">펫시터 찾기</p>
+        <p class="list_title">펫 찾기</p>
         <!-- 시터성별, 요일, 서비스, 동물종류 필터 피드-->
         <div class="filter_feed">
           <div class="f_row">
@@ -84,9 +84,10 @@
                 </div>
               </div>
               <div class="icons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
                 <a href="#"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="#"><i class="fa-solid fa-comment-dots"></i></a>
               </div>
-              <span class="pet_btn submit_btn transition02">펫시터정보등록하기</span>
             </li>
           </ul>
         </div>

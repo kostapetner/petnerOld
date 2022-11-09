@@ -11,7 +11,7 @@
       <div>
         <p class="fm_title">마이페이지</p>
         <div class="fms">
-          <a href="#">마이페이지</a>
+          <a href="/mypage">마이페이지</a>
           <a href="#">팔로우/팔로워</a>
           <a href="#">쪽지</a>
           <a href="#">내가찜한게시글</a>
