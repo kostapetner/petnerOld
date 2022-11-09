@@ -5,6 +5,7 @@
 	value="${pageContext.request.contextPath}/resources/images" />
 
 <style>
+<<<<<<< HEAD
 .cont_view {
 	padding: 100px 0
 }
@@ -26,6 +27,18 @@
 	min-width: 140px;
 	padding-bottom: 20px
 }
+=======
+  .cont_view{padding:100px 0}
+  .cont_view .menu_title{
+    padding-bottom: 38px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+  }
+  .cont_view .menu_title a{margin-left:40px; color:#888}
+  .cont_view .data .key{display:inline-block; min-width: 140px; padding-bottom:20px}
+>>>>>>> origin/dasom
 </style>
 
 <div class="content">

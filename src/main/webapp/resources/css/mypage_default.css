@@ -48,3 +48,15 @@
   .my_view .side_menu li .second_menu a:hover{font-weight: 400; text-decoration: underline;}
 
   .my_view .cont_view{width: 100%; padding-top:30px;}
+  
+  /* 마이페이지 cont_view  */
+  .cont_view{padding:100px 0}
+  .cont_view .menu_title{
+    padding-bottom: 38px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+  }
+  .cont_view .menu_title a{margin-left:40px; color:#888}
+  .cont_view .data .key{display:inline-block; min-width: 140px; padding-bottom:20px}
