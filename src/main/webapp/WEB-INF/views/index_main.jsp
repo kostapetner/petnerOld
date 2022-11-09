@@ -16,11 +16,7 @@
     <!-- CONTAINER -->
     <c:if test= "${empty authUser}">
     <div class="container">
-<<<<<<< HEAD
-     	로그인 전 화면 (No 세션)
-=======
      	index화면 vv
->>>>>>> hyekyung
     </div>
 		</c:if>
 		
