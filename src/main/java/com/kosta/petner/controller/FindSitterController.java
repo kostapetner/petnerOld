@@ -1,4 +1,4 @@
-package com.kosta.petner.contorller;
+package com.kosta.petner.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

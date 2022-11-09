@@ -6,28 +6,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<c:import url='/WEB-INF/views/include/common_head.jsp'/>
-	<title>Petner index 화면</title>
+	<title>${title}</title>
 </head>
 <body>
   <div id="wrapper">
     <!-- HEADER BASIC -->
-    <c:import url='/WEB-INF/views/include/header.jsp'/>
+    관리자페이지
     <!-- CONTAINER -->
-    <c:if test= "${empty authUser}">
     <div class="container">
-     	index화면 vv
+     <c:import url='/WEB-INF/views/${page}.jsp'/>
     </div>
-		</c:if>
-		
-	<c:if test= "${not empty authUser}">
-    <div class="container">
-     	로그인 후 화면 (with 세션)
-    </div>
-		</c:if>
-		<!-- FOOTER BASIC -->
-    <c:import url='/WEB-INF/views/include/footer.jsp'/>
-    
   </div>
 </body>
 </html>

@@ -30,13 +30,13 @@
 <!-- HEADER BASIC -->
 <header id="header">
   <div class="header_inner">
-    <h1><img src="${imgPath}/header_logo.png" alt="logo"></h1>
+    <h1><a href="/petner"><img src="${imgPath}/header_logo.png" alt="logo"></a></h1>
     <nav id="gnb">
       <c:choose>
       <c:when  test="${empty authUser}">
       <ul>
-      	<li><a href="#">펫시터 찾기</a></li>
-        <li><a href="#">돌봐줄 동물 찾기</a></li>
+        <li><a href="/petner/findSitter">펫시터 찾기</a></li>
+        <li><a href="/petner/findPet">돌봐줄 동물 찾기</a></li>
         <li><a href="#">공지사항</a></li>
       </ul>
       </c:when>
@@ -62,7 +62,11 @@
 		</c:if>
         <!-- 세션없을때 로그인 -->
         <c:if test="${empty authUser}">
+<<<<<<< HEAD
         <li><a class="login" href="./login">로그인</a></li>
+=======
+        <li><a class="login" href="/petner/login">로그인</a></li>
+>>>>>>> development
         </c:if>
       </ul>
     </div>

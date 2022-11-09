@@ -1,55 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2d6fc6008c147d8c5d81603f2166c5d&libraries=services"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/resources/css/common.css">
-<link rel="stylesheet" href="/resources/css/form_component.css">
-<link rel="stylesheet" href="/resources/css/mypage_form.css">
-<title>펫정보입력</title>
-<style>
-	.map_wrap {
-		position: relative;
-		width: 100%;
-		height: 350px;
-	}
-	
-	.title {
-		font-weight: bold;
-		display: block;
-	}
-	
-	.hAddr {
-		position: absolute;
-		left: 10px;
-		top: 10px;
-		border-radius: 2px;
-		background: #fff;
-		background: rgba(255, 255, 255, 0.8);
-		z-index: 1;
-		padding: 5px;
-	}
-	
-	#centerAddr {
-		display: block;
-		margin-top: 2px;
-		font-weight: normal;
-	}
-	
-	.bAddr {
-		padding: 5px;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-	}
-</style>
-</head>
-
 <body>
 	<div id="wrapper">
 		<div class="login_form w50">
@@ -161,9 +112,9 @@ $(document).ready(function(){
 		});
 	})
  
- 
-  $(".submit_btn").click(function(){
-    $("#petForm").submit();
-  })
+	//submit 
+	$(".submit_btn").click(function(){
+	  $("#petForm").submit();
+	})
 })
 </script>

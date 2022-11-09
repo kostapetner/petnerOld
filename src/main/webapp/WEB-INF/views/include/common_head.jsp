@@ -11,8 +11,8 @@
 <!-- CSS -->
 <link rel="stylesheet" href="${cssPath}/common.css">
 <link rel="stylesheet" href="${cssPath}/form_component.css">
-<link rel="stylesheet" href="${cssPath}/mypage_default.css">
 <link rel="stylesheet" href="${cssPath}/list.css">
+<link rel="stylesheet" href="${cssPath}/mypage_default.css">
 <link rel="stylesheet" href="${cssPath}/mypage_form.css">
 
 <!-- JS -->

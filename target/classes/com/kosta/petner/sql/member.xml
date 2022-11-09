@@ -3,7 +3,7 @@
 <mapper namespace="mapper.member">
 	<select id="getMyinfo" resultType="com.kosta.petner.bean.Member">
 		<![CDATA[
-			SELECT * FROM USERS2 WHERE ID = #{id}
+			SELECT * FROM USERS WHERE ID = #{id}
 		]]>
 	</select>
 </mapper>

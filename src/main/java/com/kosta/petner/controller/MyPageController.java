@@ -1,4 +1,4 @@
-package com.kosta.petner.contorller;
+package com.kosta.petner.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -33,8 +33,15 @@ public class MyPageController {
 		System.out.println("member정보"+member);
 		
 		model.addAttribute("page", "mypage/myinfo");
-		model.addAttribute("title", "기본정보");
+		model.addAttribute("title", "나의정보보기");
 		model.addAttribute("member", member);
+		return "/layout/mypage_default";
+	}
+	
+	@RequestMapping("/mypage/myinfoEdit")
+	public String myinfoEdit(HttpSession session, Model model) {
+		model.addAttribute("page", "mypage/myinfo");
+		model.addAttribute("title", "나의정보수정");
 		return "/layout/mypage_default";
 	}
 	
