@@ -45,6 +45,6 @@
       <a href="#"> 아이디 / 비밀번호 찾기</a>
     </p>
     <p class="login_option"><span class="pet_btn login_btn kakao_btn">카카오톡계정으로 로그인하기</span></p>
-    <p><a href="#">펫트너회원가입</a></p>
+    <p><a href="./join">펫트너회원가입</a></p>
   </div>
 </div>
