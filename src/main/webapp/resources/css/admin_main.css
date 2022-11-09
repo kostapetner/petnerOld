@@ -1,0 +1,45 @@
+body {
+  font-size: .875rem;
+}
+
+
+
+
+
+header {
+  /* width: 75%; */
+  height: 75px;
+  /* margin-left: 25%; */
+  position: fixed;
+}
+
+.side_header {
+  height: 60px;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+}
+
+/*
+ * Sidebar
+ */
+
+
+
+/* menu */
+
+
+/* **** */
+
+
+
+/*
+ * Navbar
+ */
+
+
+
+
+
