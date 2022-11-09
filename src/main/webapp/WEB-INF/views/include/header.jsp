@@ -34,7 +34,7 @@
     <nav id="gnb">
       <ul>
         <li><a href="/findSitter">펫시터 찾기</a></li>
-        <li><a href="#">돌봐줄 동물 찾기</a></li>
+        <li><a href="/findPet">돌봐줄 동물 찾기</a></li>
         <li><a href="#">공지사항</a></li>
       </ul>
     </nav>
