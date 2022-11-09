@@ -18,7 +18,7 @@
 	</select>
 	
 	
-	<select id="doLogin" parameterType="String" resultType="com.kosta.petner.bean.UsersVo">
+	<select id="getByIdAndPassword" parameterType="map" resultType="com.kosta.petner.bean.UsersVo">
 	<![CDATA[
 		select userNo, userType, id, password,email,name,nickname,gender,address, joindate
 		from users 
@@ -26,12 +26,6 @@
 	]]>
 	</select>
 	
-		<select id="doLoginCnt" parameterType="com.kosta.petner.bean.UsersVo" resultType="int"> 
-	<![CDATA[
-		SELECT count(*)
-		FROM USERS 
-		WHERE ID = #{id} and password = #{password}
-	]]>
-	</select>
+
 	
 </mapper>

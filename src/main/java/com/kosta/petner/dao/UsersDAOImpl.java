@@ -30,20 +30,17 @@ public class UsersDAOImpl implements UsersDAO{
 	public UsersVo selectId(String id) throws Exception {
 		return sqlSession.selectOne("mapper.users.selectId", id);
 	}
-
-	//로그인
 	@Override
-	public UsersVo getUsers(UsersVo usersVo) throws Exception {
-		return sqlSession.selectOne("mapper.users.doLogin",usersVo);
+	public UsersVo getUsers(String id, String password) {
+		Map<String,String> map = new HashMap<String, String>();
+		map.put("id", id);
+		map.put("password", password);
+		UsersVo usersVo = sqlSession.selectOne("mapper.users.getByIdAndPassword",map);
+		
+		return usersVo;
 	}
 	
-	//로그인 개수
-	@Override
-	public int doLoginCnt(UsersVo usersVo) throws Exception {
-		int count = sqlSession.selectOne("mapper.users.doLoginCnt",usersVo);
-		return count;
-	}
-
+	
 	
 
 	}

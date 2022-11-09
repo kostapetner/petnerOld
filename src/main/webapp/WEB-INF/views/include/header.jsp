@@ -62,7 +62,7 @@
 		</c:if>
         <!-- 세션없을때 로그인 -->
         <c:if test="${empty authUser}">
-        <li><a class="login" href="/login">로그인</a></li>
+        <li><a class="login" href="./login">로그인</a></li>
         </c:if>
       </ul>
     </div>
@@ -92,7 +92,7 @@
           <li><a href="#">리뷰관리</a></li>
         </ul>
       </div> -->
-      <div><a href="/logout">로그아웃</a></div>
+      <div><a href="./logout">로그아웃</a></div>
     </div>
   </div>
 </header>

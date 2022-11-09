@@ -1,6 +1,5 @@
 package com.kosta.petner.contorller;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,32 +75,34 @@ public class UsersController {
 		}
 		
 		//로그인
-		@RequestMapping(value = "/login", method = RequestMethod.POST)
-		public String doLogin(HttpServletRequest request, @ModelAttribute UsersVo usersVo, Model model) throws Exception {
+		@RequestMapping(value="/login",method = RequestMethod.POST)              
+		public String login(@ModelAttribute UsersVo userVo, Model model) {
+				System.out.println(userVo);
+			System.out.println("vo.getId():    "+ userVo.getId());
+			System.out.println("vo.getPassword():    "+ userVo.getPassword());
+			System.out.println("vo.getNickname():    "+ userVo.getNickname());
 			
-			int resultCnt = usersService.doLoginCnt(usersVo);
-			UsersVo resultVo = usersService.getUsers(usersVo);
-			
-			System.out.println(usersVo);
-			System.out.println("vo.getId():    "+ usersVo.getId());
-			System.out.println("vo.getPassword():    "+ usersVo.getPassword());
-			
-			if(resultCnt == 1) {
-				session.setAttribute("authUser", resultVo);
-				return "redirect:/";
-			}else {
-				int fail = 0;
-				model.addAttribute("fail", fail);
-				return "user/loginForm";
+			UsersVo authUser = usersService.getUsers(userVo);
+
+			if(authUser ==null) {
+				System.out.println("로그인 실패");
+				model.addAttribute("result", "fail");
+				return "user/loginForm";	
 			}
-		}
-		
+			
+			session.setAttribute("authUser", authUser);
+			
+			
+			return "redirect:/";
+			}
+
+			
 		@RequestMapping(value="/logout",method = RequestMethod.GET)
 		public String logout() {
 			
 			session.removeAttribute("authUser");
 			return "redirect:/";
-		
-	}
+		}
+		 
 
 }

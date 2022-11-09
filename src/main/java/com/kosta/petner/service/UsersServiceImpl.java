@@ -1,5 +1,7 @@
 package com.kosta.petner.service;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,20 +35,18 @@ public class UsersServiceImpl implements UsersService {
 	}
 
 
+	
 	@Override
-	public UsersVo getUsers(UsersVo usersVo) throws Exception {
-		return usersDAO.getUsers(usersVo);
+	public UsersVo getUsers(UsersVo usersVo) {
+		return usersDAO.getUsers(usersVo.getId(), usersVo.getPassword());
+			}
 	}
 
 
-	@Override
-	public int doLoginCnt(UsersVo usersVo) throws Exception {
-		return usersDAO.doLoginCnt(usersVo);
-	}
+
+	
 	
 	
 
 
 	
-
-}
